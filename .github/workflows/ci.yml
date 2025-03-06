@@ -47,6 +47,27 @@ jobs:
             repo: "profile_collection"
             branch: "main"
             beamline_acronym: "qas"
+          - org: "NSLS-II-IXS"
+            repo: "profile_collection"
+            branch: "main"
+            beamline_acronym: "ixs"
+          - org: "NSLS-II-CHX"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "chx"
+          - org: "NSLS-II-CMS"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "cms"
+          - org: "NSLS-II-SMI"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "smi"
+          - org: "NSLS-II-ISR"
+            repo: "profile_D-hutch"
+            branch: "master"
+            beamline_acronym: "isr"
+          
 
     runs-on: ubuntu-latest
     steps:
