@@ -65,7 +65,7 @@ jobs:
             beamline_acronym: "smi"
           - org: "NSLS-II-ISR"
             repo: "profile_D-hutch"
-            branch: "master"
+            branch: "main"
             beamline_acronym: "isr"
           
 
