@@ -21,7 +21,7 @@ jobs:
         repos:
           - org: "NSLS-II-CSX"
             repo: "profile_collection"
-            branch: "master"
+            branch: "main"
             beamline_acronym: "csx"
           - org: "NSLS-II-SRX"
             repo: "profile_collection"
@@ -45,7 +45,7 @@ jobs:
             beamline_acronym: "bmm"
           - org: "NSLS-II-QAS"
             repo: "profile_collection"
-            branch: "master"
+            branch: "main"
             beamline_acronym: "qas"
 
     runs-on: ubuntu-latest
