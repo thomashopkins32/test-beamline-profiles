@@ -1,0 +1,62 @@
+name: Test IPython beamline profiles
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      version: # the variable you can use in place of a matrix
+        required: true
+        type: string
+
+jobs:
+  testing_beamline_profiles:
+    name: ${{ matrix.repos.beamline_acronym }}-py311
+    env:
+      REPO_URL: "https://github.com/${{ matrix.repos.org }}/${{ matrix.repos.repo }}"
+    strategy:
+      fail-fast: false
+      matrix:
+        repos:
+          - org: "NSLS-II-CSX"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "csx"
+          - org: "NSLS-II-SRX"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "srx"
+          - org: "NSLS-II-SIX"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "six"
+          - org: "NSLS-II-HXN"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "hxn"
+          - org: "NSLS-II-ISR"
+            repo: "profile_analysis"
+            branch: "master"
+            beamline_acronym: "isr"
+          - org: "NSLS-II-BMM"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "bmm"
+          - org: "NSLS-II-QAS"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "qas"
+
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "TEST_CONDA_PACKED_NAME=${{ needs.generate_conda_packd_envs.outputs.test_conda_packed_name }}" >> $GITHUB_ENV
+      - name: using test-action
+        uses: NSLS2/gha-beamline-integration-test@2025-1.0-test
+        with:
+          conda_env_url: "https://zenodo.org/records/14862443/files/2025-1.0-py311-tiled.tar.gz"
+          conda_env_md5: "3b1074c0827ee3baf0cdcd64917b9afa"
+          org: "${{ matrix.repos.org }}"
+          repo: "${{ matrix.repos.repo }}"
+          branch: "${{ matrix.repos.branch }}"
+          beamline-acronym: "${{ matrix.repos.beamline_acronym }}"
