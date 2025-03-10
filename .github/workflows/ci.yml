@@ -87,10 +87,6 @@ jobs:
             repo: "profile_collection"
             branch: "master"
             beamline_acronym: "esm"
-          - org: "NSLS-II-SIX"
-            repo: "profile_collection"
-            branch: "master"
-            beamline_acronym: "six"
 
     runs-on: ubuntu-latest
     steps:
