@@ -82,7 +82,7 @@ jobs:
           - org: "NSLS-II-ESM-1"
             repo: "profile_collection"
             branch: "master"
-            beamline_acronym: "esm"
+            beamline_acronym: "arpes"
           - org: "NSLS-II-ESM-2"
             repo: "profile_collection"
             branch: "master"
