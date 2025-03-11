@@ -19,6 +19,10 @@ jobs:
       fail-fast: false
       matrix:
         repos:
+          - org: "NSLS-II-AMX"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "amx"
           - org: "NSLS-II-BMM"
             repo: "profile_collection"
             branch: "master"
@@ -48,6 +52,10 @@ jobs:
             repo: "profile_collection"
             branch: "master"
             beamline_acronym: "xpeem"
+          - org: "NSLS-II-FMX"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "fmx"
           - org: "NSLS-II-FXI"
             repo: "profile_collection"
             branch: "main"
@@ -68,6 +76,14 @@ jobs:
           #   repo: "profile_analysis"
           #   branch: "master"
           #   beamline_acronym: "isr"
+          - org: "NSLS-II-LIX"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "lix"
+          - org: "NSLS-II-NYX"
+            repo: "profile_collection"
+            branch: "main"
+            beamline_acronym: "nyx"
           - org: "NSLS-II-QAS"
             repo: "profile_collection"
             branch: "main"
@@ -92,6 +108,10 @@ jobs:
             repo: "profile_collection"
             branch: "master"
             beamline_acronym: "xfm"
+          - org: "NSLS-II-XFP"
+            repo: "profile_collection"
+            branch: "master"
+            beamline_acronym: "xfp"
 
     runs-on: ubuntu-latest
     steps:
