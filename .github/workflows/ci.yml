@@ -116,6 +116,10 @@ jobs:
             repo: "profile_collection"
             branch: "main"
             beamline_acronym: "tes"
+          - org: "NSLS-II-TST"
+            repo: "profile_collection"
+            branch: "main"
+            beamline_acronym: "tst"
           - org: "NSLS-II-SST"
             repo: "profile_collection"
             branch: "main"
@@ -140,6 +144,10 @@ jobs:
             repo: "profile_collection"
             branch: "master"
             beamline_acronym: "xpd"
+          - org: "NSLS-II-XPD-tomo"
+            repo: "profile_collection"
+            branch: "main"
+            beamline_acronym: "xpdd"
 
     runs-on: ubuntu-latest
     steps:
