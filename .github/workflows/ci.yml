@@ -21,7 +21,7 @@ jobs:
         repos:
           - org: "NSLS-II-AMX"
             repo: "profile_collection"
-            branch: "master"
+            branch: "2025-2.0"
             beamline_acronym: "amx"
           - org: "NSLS-II-BMM"
             repo: "profile_collection"
