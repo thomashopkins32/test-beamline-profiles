@@ -100,7 +100,7 @@ jobs:
             beamline-acronym: "six"
           - org: "NSLS-II-SMI"
             repo: "profile_collection"
-            branch: "data-security"
+            branch: "2025-2.0"  # the branch is created off of the 'data-security' branch
             beamline-acronym: "smi"
             beamline-redis-prefix: "swaxs-"
           - org: "NSLS-II-SRX"
