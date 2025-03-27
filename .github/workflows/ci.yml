@@ -102,6 +102,7 @@ jobs:
             repo: "SMI_profile_collection"
             branch: "2025-2.0"
             beamline-acronym: "smi"
+            beamline-redis-prefix: "swaxs-"
           #- org: "NSLS-II-SRX"
           #  repo: "profile_collection"
           #  branch: "master"
@@ -150,7 +151,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Integration Tests Against Beamline Profiles
-        uses: NSLS2/gha-beamline-integration-test@a9a0415219b3a13af3993bce52eb0d3312e4c8bd
+        uses: NSLS2/gha-beamline-integration-test@smi-key
         with:
           conda_env_url: "https://zenodo.org/records/14862443/files/2025-1.0-py311-tiled.tar.gz"
           conda_env_md5: "3b1074c0827ee3baf0cdcd64917b9afa"
@@ -158,3 +159,4 @@ jobs:
           repo: "${{ matrix.repos.repo }}"
           branch: "${{ matrix.repos.branch }}"
           beamline-acronym: "${{ matrix.repos.beamline-acronym }}"
+          beamline-redis-prefix: "${{ matrix.repos.beamline-redis-prefix }}"
