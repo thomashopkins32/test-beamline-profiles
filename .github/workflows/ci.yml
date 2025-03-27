@@ -150,7 +150,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Integration Tests Against Beamline Profiles
-        uses: NSLS2/gha-beamline-integration-test@9dc1fc3e5e8acebe1f91e8435f0dd703127df2b5
+        uses: NSLS2/gha-beamline-integration-test@a9a0415219b3a13af3993bce52eb0d3312e4c8bd
         with:
           conda_env_url: "https://zenodo.org/records/14862443/files/2025-1.0-py311-tiled.tar.gz"
           conda_env_md5: "3b1074c0827ee3baf0cdcd64917b9afa"
