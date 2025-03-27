@@ -102,6 +102,7 @@ jobs:
             repo: "profile_collection"
             branch: "data-security"
             beamline-acronym: "smi"
+            beamline-redis-prefix: "swaxs-"
           - org: "NSLS-II-SRX"
             repo: "profile_collection"
             branch: "master"
