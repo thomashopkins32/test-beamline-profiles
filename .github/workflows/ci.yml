@@ -96,11 +96,11 @@ jobs:
             beamline-acronym: "qas"
           - org: "NSLS-II-SIX"
             repo: "profile_collection"
-            branch: "master"
+            branch: "2025-2.0"
             beamline-acronym: "six"
           - org: "NSLS-II-SMI"
             repo: "profile_collection"
-            branch: "2025-2.0"  # the branch is created off of the 'data-security' branch
+            branch: "2025-2.0"
             beamline-acronym: "smi"
             beamline-redis-prefix: "swaxs-"
           - org: "NSLS-II-SRX"
@@ -153,10 +153,11 @@ jobs:
       - name: Run Integration Tests Against Beamline Profiles
         uses: NSLS2/gha-beamline-integration-test@2025-1.0-test
         with:
-          conda_env_url: "https://zenodo.org/records/14862443/files/2025-1.0-py311-tiled.tar.gz"
-          conda_env_md5: "3b1074c0827ee3baf0cdcd64917b9afa"
+          conda_env_url: "https://zenodo.org/records/15171538/files/2025-2.0-py311-tiled.tar.gz"
+          conda_env_md5: "3d705483eab31648fae7cf0ce9a77e72"
           org: "${{ matrix.repos.org }}"
           repo: "${{ matrix.repos.repo }}"
           branch: "${{ matrix.repos.branch }}"
           beamline-acronym: "${{ matrix.repos.beamline-acronym }}"
+          beamline-endstation: "${{ matrix.repos.beamline-endstation }}"
           beamline-redis-prefix: "${{ matrix.repos.beamline-redis-prefix }}"
